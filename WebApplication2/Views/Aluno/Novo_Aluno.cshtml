@@ -1,0 +1,67 @@
+﻿@model WebApplication2.Models.Aluno
+@{
+    ViewBag.Title = "Novo_Aluno";
+
+
+}
+<style>
+    .validation-summary-errors {
+        color: red;
+    }
+
+    .minhaclasse {
+        color: blue;
+    }
+
+    .minhaclasse2 {
+        color: red;
+    }
+</style>
+<h2>Cadastrar Aluno</h2>
+@*<form method="post">*@
+@using (Html.BeginForm("Novo_Aluno", "Aluno", FormMethod.Post))
+{
+
+    @Html.ValidationSummary(true)
+
+    @*NOME:*@
+    @*<input type="text" id="Nome" name="Nome" />*@
+    @*helpers*@
+    @Html.LabelFor(x => x.Nome, new { @class = "minhaclasse" })
+    @Html.TextBoxFor(x => x.Nome)
+
+    <br />
+    @Html.LabelFor(x => x.Idade)
+    @Html.TextBoxFor(x => x.Idade)
+
+
+    <br />
+    @Html.LabelFor(x => x.Sexo)
+    @Html.TextBoxFor(x => x.Sexo)
+    @Html.ValidationMessageFor(x => x.Sexo)
+
+    <br />
+
+    @Html.LabelFor(x => x.Peso)
+    @Html.TextBoxFor(x => x.Peso)
+    @Html.ValidationMessageFor(x => x.Peso)
+
+
+
+
+    @*IDADE:
+        <input type="text" id="Idade" name="Idade" />
+        Sexo:
+
+        <input type="text" id="Sexo" name="Sexo" />
+        <br />*@
+    <br />
+    <input class="btn-success" type="submit" value="SALVAR" />
+
+
+
+    @*</form>*@
+}
+
+
+

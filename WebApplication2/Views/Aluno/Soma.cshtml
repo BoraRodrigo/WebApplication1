@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Soma";
+}
+
+<h2>Soma</h2>
+
+<form action="Soma" method="post">
+    <h3>IMPAR OU PAR?</h3>
+    <table>
+        <tr>
+            <td>INSIRA UM NUMERO</td>
+            <td><input type="text" id="txt_valor" name="txt_valor" value="@ViewBag._valor"></td>
+            <td><input type="submit" id="btn_somar" name="btn_somar" value="SOMA E VEREFICA"></td>
+        </tr>
+    </table>
+
+</form>
+
+
+<p>Resultado Soma: </p>
+<p style=@ViewBag._cor> @ViewData["resultado"] </p>
+<p style=@ViewBag._cor>@ViewBag._tipo</p>
+
+

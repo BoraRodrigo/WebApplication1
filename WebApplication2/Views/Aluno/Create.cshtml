@@ -1,0 +1,40 @@
+﻿@model WebApplication2.Models.Aluno
+@{
+    ViewBag.Title = "Create";
+}
+
+<form action="Create" method="post">
+    <h2>BAG</h2>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td><input type="text" id="txt_id" name="txt_id" value="@ViewBag._id" /></td>
+            <td>NOME</td>
+            <td><input type="text" id="txt_nome" name="txt_nome" value=" @ViewBag._nome" /></td>
+            <td>IDADE</td>
+            <td><input type="nu" id="txt_idade" name="txt_idade" value=" @ViewBag._idade" /></td>
+         
+            <td><input type="submit" id="btn_salvar" name="btnSalvar" value="Salvar" /> </td>
+        </tr>
+    </table>
+
+    <p>@ViewBag._lista</p>
+    <p>"@ViewBag._mensagem"</p>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
