@@ -2,9 +2,7 @@
 @{
     ViewBag.Title = "Soma";
 }
-
 <h2>Soma</h2>
-
 <form action="Soma" method="post">
     <h3>IMPAR OU PAR?</h3>
     <table>
@@ -14,12 +12,11 @@
             <td><input type="submit" id="btn_somar" name="btn_somar" value="SOMA E VEREFICA"></td>
         </tr>
     </table>
-
 </form>
-
-
 <p>Resultado Soma: </p>
 <p style=@ViewBag._cor> @ViewData["resultado"] </p>
 <p style=@ViewBag._cor>@ViewBag._tipo</p>
+
+@Html.ActionLink("Cadastrar", "Novo_Aluno", "Aluno")
 
 

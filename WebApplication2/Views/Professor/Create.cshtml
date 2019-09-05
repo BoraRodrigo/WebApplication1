@@ -63,15 +63,18 @@
     <br />
     @Html.ValidationMessageFor(x => x.Email)
     <br />
-
-
-
     <input type="submit" value="SALVAR" />
+
+    <p>CPF JA CADASTRADOS:</p>
+    <br />
+    <p>@ViewBag._lista</p>
 </form>
+
+
 
 @* Exibe a mensagem automaticamente na tela *@
 @section Scripts{
-    
+
     @Scripts.Render("~/bundles/jqueryval")
-    
-    }
+
+}

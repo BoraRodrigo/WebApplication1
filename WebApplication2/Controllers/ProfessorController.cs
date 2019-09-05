@@ -12,6 +12,9 @@ namespace WebApplication2.Controllers
     {
         // GET: Professor
         static List<String> listaCpf = new List<string>();
+
+         public static  List<String> minha_lista = new List<string>();
+         string lista_Mostra_cpf_tela;
         public ActionResult Index()
         {
             return View();
@@ -29,13 +32,23 @@ namespace WebApplication2.Controllers
             }
             else
             {
-                List<String> minha_lista = new List<string>();
+              
                 if (Session["lista_de_cpf"] != null)
                 {
-                    minha_lista = (List<String>)Session["lista_de_cpf"];
+                    minha_lista = (List<String>)Session["lista_de_cpf"];               
+                   
                 }
                 minha_lista.Add(professor.Cpf);
                 Session["lista_de_cpf"] = minha_lista;
+
+
+                for (int i = 0; i < minha_lista.Count; i++)
+                {
+                    lista_Mostra_cpf_tela = lista_Mostra_cpf_tela + " CPF: " + minha_lista[i];
+                }
+
+                ViewBag._lista = lista_Mostra_cpf_tela;
+
                 return View();
             }
 
@@ -80,7 +93,6 @@ namespace WebApplication2.Controllers
             {
                 return Json(true, JsonRequestBehavior.AllowGet);
             }
-
             //        int i = 0;
             //        do
             //        {

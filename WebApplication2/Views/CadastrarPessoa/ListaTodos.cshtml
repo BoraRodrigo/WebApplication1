@@ -1,0 +1,58 @@
+﻿@model IEnumerable<WebApplication2.Models.Pessoa>
+@{
+    ViewBag.Title = "ListaTodos";
+}
+<h2>ListaTodos</h2>
+
+<p>
+    @Html.ActionLink("Cadastrar Novo", "Cadastrar_")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_pessoa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Idade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Peso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sexo)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id_pessoa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Peso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sexo)
+            </td>
+            <td>
+                @Html.ActionLink("Alterar", "EditarTodos", new { id = item.Id_pessoa }) |
+
+                @Html.ActionLink("Excluir", "Excluir_", new { id = item.Id_pessoa })
+            </td>
+
+        </tr>
+
+    }
+
+</table>

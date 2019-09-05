@@ -121,6 +121,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AlunoController.cs" />
+    <Compile Include="Controllers\CadastrarPessoaController.cs" />
     <Compile Include="Controllers\FacearController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
@@ -181,6 +182,12 @@
     <Content Include="Views\Aluno\Novo_Aluno.cshtml" />
     <Content Include="Views\Aluno\Soma.cshtml" />
     <Content Include="Views\Professor\Create.cshtml" />
+    <Content Include="Views\CadastrarPessoa\Menu_.cshtml" />
+    <Content Include="Views\CadastrarPessoa\Cadastrar_.cshtml" />
+    <Content Include="Views\CadastrarPessoa\Login_.cshtml" />
+    <Content Include="Views\CadastrarPessoa\ListaTodos.cshtml" />
+    <Content Include="Views\CadastrarPessoa\Excluir_.cshtml" />
+    <Content Include="Views\CadastrarPessoa\EditarTodos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

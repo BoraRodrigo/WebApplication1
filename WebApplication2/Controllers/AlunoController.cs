@@ -15,8 +15,6 @@ namespace WebApplication2.Controllers
         string listadealunos;
         static int resultado = 0;
     
-
-
         public ActionResult Index()
         {
 
@@ -77,7 +75,7 @@ namespace WebApplication2.Controllers
         {
             resultado = (txt_valor + (resultado));
             ViewBag._valor = txt_valor;
-           ViewData["resultado"] = resultado;
+            ViewData["resultado"] = resultado;
 
             if (resultado % 2 == 0)
             {
@@ -109,17 +107,14 @@ namespace WebApplication2.Controllers
             return View();
 
         }
-
         public ActionResult Novo_Aluno()
         {
             return View();
-
         }
         [HttpPost]
         // pra passar somente um objeto ou mais de um usar o colection.
         public ActionResult Novo_Aluno(Aluno aluno, FormCollection form)
         {
-
             bool validadados = true;
 
             if (string.IsNullOrEmpty(aluno.Nome))
@@ -160,29 +155,20 @@ namespace WebApplication2.Controllers
 
                 validadados = false;
             }
-
-
             try
             {
                 if (validadados==true)
                 {
                     aluno.Cadastrar();
-
-
-                }
-                
+                    ViewBag.Status = "Dados gravados com Êxito";
+                    ModelState.Clear();
+                    return View();
+                }               
             }
             catch 
             {
-
             }
-        
-
-
-
             return View();
-
         }
-
     }
 }
