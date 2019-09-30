@@ -96,7 +96,6 @@ namespace WebApplication2.Models
             conec.Open();
             comando.ExecuteNonQuery();//salva e não retorna nennhum valor.
             conec.Close();
-
         }
         public void Alterar(Pessoa pessoa)
         {

@@ -1,0 +1,165 @@
+﻿@model IEnumerable<PosiSIM.Models.Resposta>
+
+@{
+    ViewBag.Title = "Listar_";
+}
+
+<h2>Listar_</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_Formulario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_3_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_4_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_4_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_8)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_9)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_9_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_1_1_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_1_1_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_2_1_0)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_2_1_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_2_1_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_3_1_0)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_3_1_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_10)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_11)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id_Formulario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_3_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_4_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_4_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_8)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_9)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_9_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_1_1_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_1_1_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_2_1_0)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_2_1_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_2_1_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_3_1_0)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_3_1_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_10)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_11)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

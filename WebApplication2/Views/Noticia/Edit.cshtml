@@ -1,0 +1,23 @@
+﻿@model WebApplication2.Models.Noticia
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Alterar Dados</h2>
+
+<form>
+
+    ID: @Html.TextBoxFor(x => x.ID); <br />
+
+    ID TOPICO: @Html.TextBoxFor(x => x.Id_topico);<br />
+
+    TITULO: @Html.TextBoxFor(x => x.Titulo);<br />
+
+    DESCRICAO: @Html.TextBoxFor(x => x.Descricao);<br />
+
+
+    <input type="submit" value="EDITAR"/>
+
+</form>
+
+

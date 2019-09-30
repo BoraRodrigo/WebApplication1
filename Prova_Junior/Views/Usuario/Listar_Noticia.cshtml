@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Prova_Junior.Models.Noticia>
+
+@{
+    ViewBag.Title = "Listar_Noticia";
+}
+
+<h2>Listar_Noticia</h2>
+
+<p>
+    @Html.ActionLink("Nova", "Cadastrar_Noticia")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_Noticia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id_Noticia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+
+            @Html.ActionLink("Alterar", "Alterar_Noticia", new { id = item.Id_Noticia }) |
+
+            @Html.ActionLink("Excluir", "Excluir_", new { id = item.Id_Noticia }) 
+        </td>
+    </tr>
+}
+
+</table>

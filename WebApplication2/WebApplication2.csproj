@@ -124,12 +124,14 @@
     <Compile Include="Controllers\CadastrarPessoaController.cs" />
     <Compile Include="Controllers\FacearController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NoticiaController.cs" />
     <Compile Include="Controllers\PessoaController.cs" />
     <Compile Include="Controllers\ProfessorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Aluno.cs" />
+    <Compile Include="Models\Noticia.cs" />
     <Compile Include="Models\Pessoa.cs" />
     <Compile Include="Models\Professor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -188,6 +190,12 @@
     <Content Include="Views\CadastrarPessoa\ListaTodos.cshtml" />
     <Content Include="Views\CadastrarPessoa\Excluir_.cshtml" />
     <Content Include="Views\CadastrarPessoa\EditarTodos.cshtml" />
+    <Content Include="Views\Noticia\Noticia.cshtml" />
+    <Content Include="Views\Noticia\Create.cshtml" />
+    <Content Include="Views\Noticia\Edit.cshtml" />
+    <Content Include="Views\Shared\_Topo.cshtml" />
+    <Content Include="Views\Shared\_Rodape.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -40,8 +40,6 @@ namespace WebApplication2.Controllers
                 }
                 minha_lista.Add(professor.Cpf);
                 Session["lista_de_cpf"] = minha_lista;
-
-
                 for (int i = 0; i < minha_lista.Count; i++)
                 {
                     lista_Mostra_cpf_tela = lista_Mostra_cpf_tela + " CPF: " + minha_lista[i];
@@ -51,7 +49,6 @@ namespace WebApplication2.Controllers
 
                 return View();
             }
-
             return View(professor);
         }
 
@@ -66,7 +63,6 @@ namespace WebApplication2.Controllers
             {
                 return Json(false, JsonRequestBehavior.AllowGet);
             }
-
         }
         public ActionResult validacao_cpf(string cpf, string email)
         {
@@ -93,26 +89,6 @@ namespace WebApplication2.Controllers
             {
                 return Json(true, JsonRequestBehavior.AllowGet);
             }
-            //        int i = 0;
-            //        do
-            //        {
-
-            //            if (listaCpf[i].Equals(cpf))
-            //            {
-            //                i = i + 1;
-
-            //                return Json(true, JsonRequestBehavior.AllowGet);
-            //              }
-            //            else
-            //            {
-            //                listaCpf.Add(cpf);
-            //                return Json(false, JsonRequestBehavior.AllowGet);
-
-            //            }
-            //        } while (i==listaCpf.Count);
-
-
-            //        return Json(false, JsonRequestBehavior.AllowGet);
         }
     }
     

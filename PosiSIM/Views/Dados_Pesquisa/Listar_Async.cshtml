@@ -1,0 +1,234 @@
+﻿@model IEnumerable<PosiSIM.Models.Dados_Pesquisa>
+
+@{
+    ViewBag.Title = "Listar_Async";
+}
+
+<h2>Listar_Async</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_Formulario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_3_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_4_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_4_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_8)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_9)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_9_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_1_1_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_1_1_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_2_1_0)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_2_1_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_2_1_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_3_1_0)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_3_1_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_10)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resposta_11)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_Entrevistado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome_Completo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Faixa_Etaria)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rua)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numero_Casa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_Formulario_Respondido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_Entrevistado_Respondido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Id_Pesquisador_Respondido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data_Hora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id_Formulario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_3_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_4_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_4_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_8)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_9)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_9_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_1_1_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_1_1_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_2_1_0)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_2_1_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_2_1_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_3_1_0)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_3_1_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_10)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resposta_11)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id_Entrevistado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome_Completo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Faixa_Etaria)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Genero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rua)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numero_Casa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id_Formulario_Respondido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id_Entrevistado_Respondido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id_Pesquisador_Respondido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_Hora)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Latitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Longitude)
+        </td>
+        <td>
+            @Html.ActionLink("Detalhes ", "Details", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+</table>

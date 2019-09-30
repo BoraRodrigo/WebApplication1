@@ -1,0 +1,42 @@
+﻿@model Prova_Junior.Models.Usuario
+@{
+    ViewBag.Title = "Cadastrar_Usuario";
+}
+
+<h2>Cadastrar Usuario</h2>
+
+<form method="post">
+
+    <br />
+    @Html.LabelFor(x => x.Nome)
+    <br />
+    @Html.TextBoxFor(x => x.Nome)
+    <br />
+    @Html.ValidationMessageFor(x => x.Nome)
+    <br />
+
+    @Html.LabelFor(x => x.Tipo)
+    <br />
+    @Html.TextBoxFor(x => x.Tipo)
+    <br />
+    @Html.ValidationMessageFor(x => x.Tipo)
+
+    @Html.LabelFor(x => x.Senha)
+    <br />
+    @Html.TextBoxFor(x => x.Senha)
+    <br />
+    @Html.ValidationMessageFor(x => x.Senha)
+    <br />
+    <br />
+    <input type="submit" value="SALVAR" />
+</form>
+
+<p>@ViewBag.Cadastrado_Com_Sucesso</p>
+
+@* Exibe a mensagem automaticamente na tela *@
+@section Scripts{
+
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+

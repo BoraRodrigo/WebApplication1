@@ -1,0 +1,63 @@
+﻿@model Prova_Junior.Models.Pessoa
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<h2>Cadastrar Usuario</h2>
+
+<form method="post">
+
+
+    @Html.LabelFor(x => x.Pessoa_Id)
+    <br />
+    @Html.TextBoxFor(x => x.Pessoa_Id)
+    <br />
+    @Html.ValidationMessageFor(x => x.Pessoa_Id)
+
+    <br />
+    @Html.LabelFor(x => x.Nome)
+    <br />
+    @Html.TextBoxFor(x => x.Nome)
+    <br />
+    @Html.ValidationMessageFor(x => x.Nome)
+    <br />
+
+    @Html.LabelFor(x => x.Sexo)
+    <br />
+    @Html.TextBoxFor(x => x.Sexo)
+    <br />
+    @Html.ValidationMessageFor(x => x.Sexo)
+
+
+    @Html.LabelFor(x => x.Idade)
+    <br />
+    @Html.TextBoxFor(x => x.Idade)
+    <br />
+    @Html.ValidationMessageFor(x => x.Idade)
+    <br />
+    @Html.LabelFor(x => x.Cpf)
+    <br />
+    @Html.TextBoxFor(x => x.Cpf)
+    <br />
+    @Html.ValidationMessageFor(x => x.Cpf)
+    <br />
+
+    @Html.LabelFor(x => x.Email)
+    <br />
+    @Html.TextBoxFor(x => x.Email)
+    <br />
+    @Html.ValidationMessageFor(x => x.Email)
+    <br />
+    <input type="submit" value="SALVAR" />
+</form>
+
+<p>@ViewBag.Cadastrado_Com_Sucesso</p>
+
+@* Exibe a mensagem automaticamente na tela *@
+@section Scripts{
+
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+

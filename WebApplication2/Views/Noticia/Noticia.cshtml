@@ -1,0 +1,55 @@
+﻿@model IEnumerable<WebApplication2.Models.Noticia>
+@{
+    ViewBag.Title = "Noticia";
+}
+
+<h2>Noticia</h2>
+@Html.ActionLink("Nova Noticia", "Create")
+<table width="100%">
+    <tr>
+        <td>ID</td>
+        <td>TIPO</td>
+        <td>DESCRICAO</td>
+        <td>EDITAR</td>
+        <td>EXCLUIR</td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @item.ID
+        </td>
+
+        @if (item.Id_topico == 0)
+        {
+            <td> ESPORTES </td>
+        }
+        else if (item.Id_topico == 1)
+        {
+            <td> CRIME </td>
+        }
+        else if (item.Id_topico == 2)
+        {
+            <td> JORNALISMO </td>
+        }
+        <td>
+            @item.Titulo
+        </td>
+        <td>
+            @item.Descricao
+        </td>
+
+        <td>
+            @Html.ActionLink("Alterar", "Edit", new { id = item.ID }) |
+        </td>
+        <td>
+            @Html.ActionLink("Excluir", "Excluir", new { id = item.ID }) |
+        </td>
+    </tr>
+    }
+</table>
+@section rodape{
+<p>Aqui fica somente o rodape desta pagina</p>
+}
+

@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<style>
+    .menu {
+        float: left;
+        width: 200px;
+        height: 450px;
+        background-color: green;
+    }
+</style>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li>@Html.ActionLink("Cadastrar", "Cadastrar", "Pessoa")</li>
+            <li>@Html.ActionLink("Listar", "Listar", "Pessoa")</li>
+            <li>Desenvolvido por rodrigo</li>
+        </ul>
+    </div>
+</body>
+</html>

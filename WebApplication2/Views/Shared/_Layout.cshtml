@@ -29,12 +29,12 @@
         </div>
     </div>
     <div class="container body-content">
-       <strong style="color:green">UNIFACEAR</strong>
+        <strong style="color:green">UNIFACEAR</strong>
         <div>
             <table width="100%">
                 <tr>
                     <td> <a href="Facear/Index"> PRINCIPAL</a> </td>
-                    <td>  @Html.ActionLink("Veja Sobre","Sobre","Facear")</td>
+                    <td>  @Html.ActionLink("Veja Sobre", "Sobre", "Facear")</td>
                     <td>  @Html.ActionLink("Professores", "Profesores", "Facear")</td>
                     <td> @Html.ActionLink("Cursos", "Cursos", "Facear")</td>
 
@@ -42,7 +42,21 @@
             </table>
 
         </div>
+
+        @*@RenderPage("~/Views/Shared/_Topo.cshtml")*@
         @RenderBody()
+
+        @if (IsSectionDefined("rodape"))
+        {
+               @RenderSection("rodape")
+        }
+        else
+        {
+            @Html.Partial("_Rodape");
+
+        }
+        @RenderPage("~/Views/Shared/_Menu.cshtml")
+        @
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Meu Aplicativo ASP.NET</p>

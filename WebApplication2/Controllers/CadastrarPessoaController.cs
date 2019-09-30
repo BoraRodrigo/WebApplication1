@@ -50,7 +50,6 @@ namespace WebApplication2.Controllers
             return View(pessoa.Lista_Pessoas_ID(id)[0]);
         }
 
-
         [HttpPost]
         public ActionResult EditarTodos(Aluno aluno)
         {
