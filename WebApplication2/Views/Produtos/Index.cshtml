@@ -1,0 +1,35 @@
+﻿@model IEnumerable <WebApplication2.Models.Produto_>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Listar Produtos</h2>
+<br />
+
+@Html.ActionLink("Novo Produto", "Create")
+<table width="100%" border="1">
+    <tr>
+        <th>ID</th>
+        <th>Descrição</th>
+        <th>Quantidade</th>
+        <th>Descrição</th>
+        <th>Alterar</th>
+        <th>Excluir</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@item.Id_Produto</td>
+        <td>@item.Descricao</td>
+        <td>@item.Quantidade</td>
+        <td>@item.Preco_Venda</td>
+        <td><a href="@Url.Action("Edit", new { id=item.Id_Produto})">Alterar</a></td>
+        <td><a href="@Url.Action("Delete", new { id=item.Id_Produto})">Excluir</a></td>
+    </tr>
+    }
+
+
+</table>
+
+
+

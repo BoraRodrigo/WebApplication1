@@ -1,0 +1,22 @@
+﻿@model WebApplication2.Models.Produto_
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Cadastrar novo produto</h2>
+<form method="post">
+    
+
+    ID @Html.TextAreaFor(x => x.Id_Produto)
+    <br />
+
+    Nome @Html.TextAreaFor(x => x.Descricao)
+    <br />
+
+    Quantidade @Html.TextAreaFor(x => x.Quantidade)
+    <br />
+
+    Preço Venda @Html.TextAreaFor(x => x.Preco_Venda)
+    <br />
+    <input type="submit" value="Salvar " />
+</form>

@@ -1,0 +1,22 @@
+﻿@model WebApplication2.Models.Produto_
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Alterar produto</h2>
+<form method="post">
+    @Html.ValidationSummary()
+
+    ID @Html.TextAreaFor(x => x.Id_Produto)
+    <br />
+
+    Nome @Html.TextAreaFor(x => x.Descricao)
+    <br />
+
+    Quantidade @Html.TextAreaFor(x => x.Quantidade)
+    <br />
+
+    Preço Venda @Html.TextAreaFor(x => x.Preco_Venda)
+    <br />
+    <input type="submit" value="Alterar " />
+</form>

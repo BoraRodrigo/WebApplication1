@@ -1,0 +1,23 @@
+﻿@model WebApplication2.Models.Produto_
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Excluir produto</h2>
+<form method="post">
+    @Html.ValidationSummary()
+
+    ID @Html.TextAreaFor(x => x.Id_Produto)
+    <br />
+
+    Nome @Html.TextAreaFor(x => x.Descricao)
+    <br />
+
+    Quantidade @Html.TextAreaFor(x => x.Quantidade)
+    <br />
+
+    Preço Venda @Html.TextAreaFor(x => x.Preco_Venda)
+    <br />
+    Deseja Realmente excluir?
+    <input type="submit" value="SIM Excluir " />
+</form>

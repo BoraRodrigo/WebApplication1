@@ -79,7 +79,7 @@ namespace PosiSIM.DAO
 
         public async static Task<List<Dados_Pesquisa>> Dados_Pesquisa()
         {
-
+            Lista_dados_Pesquisas.Clear();
 
             List<Resposta> lista_resposta = new List<Resposta>();
 
